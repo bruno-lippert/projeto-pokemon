@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+ul > li {
+  list-style: none;
+}
+
+body {
+  background-image: url("../imagens/fundo-site.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//------------------header------------------
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 50px;
+}
+
+.pokebola {
+  width: 30px;
+  height: 30px;
+}
+
+h1 {
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+//------------------fim-header------------------
+//------------------main-content------------------
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+//------------------buttons------------------
+.btn-seta {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn-seta:hover {
+  background-color: #8351FE;
+}
+
+.button-voltar {
+  transform: rotate(180deg);
+}
+//------------------fim-buttons------------------
+
+.cards {
+  width: 310px;
+  height: 520px;
+  position: relative;
+  margin: 0 60px;
+}
+
+.card{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.card.selected{
+    opacity: 1;
+    z-index: 1; //especifica a ordem de pilha de um elemento
+}
+
+.background1 {
+  background-image: url("../imagens/fundo-card-1.jpg");
+  background-repeat: no-repeat;
+}
+.background2 {
+  background-image: url("../imagens/fundo-card-2.jpg");
+  background-repeat: no-repeat;
+}
+.background3 {
+  background-image: url("../imagens/fundo-card-3.jpg");
+  background-repeat: no-repeat;
+}
+
+.card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  background-color: rgba(179, 177, 185, 0.7);
+  margin-top: 20px;
+  padding: 8px 10px;;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+
+.hp {
+  background-color: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+
+.img-pokemon {
+  width: 220px;
+  height: 230px;
+}
+
+.description {
+  text-align: left;
+  margin: 20px;
+}
+
+h3 {
+  background-color: #333;
+  padding: 5px;
+  color: white;
+}
+
+.card-description {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+//------------------fim-main-content------------------
+
+/*# sourceMappingURL=style.css.map */
