@@ -1,9 +1,8 @@
 function forwardButton(){
     const cards = document.querySelectorAll(".card")
+    if (currenCard >= cards.length -1) return //faz com que quando chegue no último cartão o programa pare, pois não tem mais cartas posteriores
     
     currenCard++
-
-    currenCard >= 2 ? currenCard = 2 : currenCard = currenCard
 
     cards[currenCard].classList.add("selected")
     cards[currenCard-1].classList.remove("selected")
@@ -11,10 +10,9 @@ function forwardButton(){
 
 function backButton() {
     const cards = document.querySelectorAll(".card")
-
-    currenCard--
+    if (currenCard === 0) return //faz com que quando chegue no primeiro cartão o programa pare, pois não tem mais cartas anteriores
     
-    currenCard <= 0 ? currenCard = 0 : currenCard = currenCard
+    currenCard--
     
     cards[currenCard].classList.add("selected")
     cards[currenCard+1].classList.remove("selected")
