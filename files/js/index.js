@@ -5,4 +5,6 @@ function forwardButton(){
     cards[currenCard].classList.add("selected")
     cards[currenCard-1].classList.remove("selected")
 }
+
+
 let currenCard = 0
