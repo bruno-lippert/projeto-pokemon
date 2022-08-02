@@ -11,9 +11,7 @@ function backButton() {
 
     currenCard--
     
-    if(currenCard <= 0){
-        currenCard = 0
-    }
+    currenCard <= 0 ? currenCard = 0 : currenCard = currenCard
     
     cards[currenCard].classList.add("selected")
     cards[currenCard+1].classList.remove("selected")
