@@ -2,6 +2,9 @@ function forwardButton(){
     const cards = document.querySelectorAll(".card")
     
     currenCard++
+
+    currenCard >= 2 ? currenCard = 2 : currenCard = currenCard
+
     cards[currenCard].classList.add("selected")
     cards[currenCard-1].classList.remove("selected")
 }
