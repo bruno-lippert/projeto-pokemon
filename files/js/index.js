@@ -1,21 +1,35 @@
 function forwardButton(){
-    const cards = document.querySelectorAll(".card")
+    getElementByClassNameCard()
     if (currenCard >= cards.length -1) return //faz com que quando chegue no último cartão o programa pare, pois não tem mais cartas posteriores
     
     currenCard++
 
-    cards[currenCard].classList.add("selected")
-    cards[currenCard-1].classList.remove("selected")
+    hideSelectedCard()
+    addClassToCurrentCard()
 }
 
 function backButton() {
-    const cards = document.querySelectorAll(".card")
+    getElementByClassNameCard()
     if (currenCard === 0) return //faz com que quando chegue no primeiro cartão o programa pare, pois não tem mais cartas anteriores
     
     currenCard--
     
-    cards[currenCard].classList.add("selected")
-    cards[currenCard+1].classList.remove("selected")
+    hideSelectedCard()
+    addClassToCurrentCard()
 }
 
+function hideSelectedCard() {
+    const selectedCard = document.querySelector(".selected")
+    selectedCard.classList.remove("selected")
+}
+
+function addClassToCurrentCard() {
+    cards[currenCard].classList.add("selected")
+}
+
+function getElementByClassNameCard(){
+    cards = document.querySelectorAll(".card")
+}
+
+let cards
 let currenCard = 0
